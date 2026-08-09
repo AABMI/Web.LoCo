@@ -1,0 +1,260 @@
+:root {
+  --bg: #060608;
+  --card-bg: #0d0d12;
+  --row-bg: #101017;
+  --row-border: #1e1e28;
+  --row-border-featured: #7c5cff;
+  --text: #f2f2f5;
+  --text-dim: #9a9aa8;
+  --purple: #a855f7;
+  --blue: #4f8bff;
+  --gap: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card-bg);
+  border: 1px solid #17171f;
+  border-radius: 28px;
+  padding: 40px 32px 32px;
+  text-align: center;
+}
+
+/* Avatar */
+.avatar-wrap {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  padding: 4px;
+  background: conic-gradient(from 220deg, var(--purple), var(--blue), var(--purple));
+  box-shadow: 0 0 30px rgba(124, 92, 255, 0.35);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+/* Text block */
+.name {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.role {
+  color: var(--purple);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  color: var(--blue);
+}
+
+.bio {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Meta row */
+.meta {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-bottom: 28px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+
+.meta li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta svg {
+  width: 16px;
+  height: 16px;
+  color: var(--purple);
+  flex-shrink: 0;
+}
+
+/* Link rows */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin-bottom: 28px;
+}
+
+.link-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--row-bg);
+  border: 1px solid var(--row-border);
+  border-radius: 16px;
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s ease, transform 0.15s ease, background 0.2s ease;
+}
+
+.link-row:hover {
+  border-color: var(--row-border-featured);
+  transform: translateY(-1px);
+  background: #131320;
+}
+
+.link-row.featured {
+  border-color: var(--row-border-featured);
+  box-shadow: 0 0 16px rgba(124, 92, 255, 0.15);
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-vpn {
+  background: linear-gradient(135deg, #7c5cff, #00d4ff);
+  box-shadow: 0 0 14px rgba(124, 92, 255, 0.5);
+}
+.icon-vpn svg { width: 24px; height: 24px; }
+
+.icon-google { background: #17171f; }
+.icon-google svg { width: 22px; height: 22px; }
+
+.icon-youtube { background: #ff0000; }
+
+.icon-telegram { background: #26a5e4; }
+
+.icon-instagram {
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.link-text {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.link-title {
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.link-sub {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.chevron {
+  color: var(--purple);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Connect socials */
+.connect-label {
+  color: var(--text-dim);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.social-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--row-bg);
+  border: 1px solid var(--row-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.social-btn:hover {
+  border-color: var(--row-border-featured);
+  transform: translateY(-2px);
+}
+
+.social-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Footer */
+.footer {
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.brand {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 380px) {
+  .card {
+    padding: 32px 20px 24px;
+    border-radius: 22px;
+  }
+  .meta {
+    gap: 14px;
+  }
+}
